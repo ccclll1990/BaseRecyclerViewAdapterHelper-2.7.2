@@ -1,4 +1,17 @@
+
+plugins {
+    id 'maven-publish'
+}
 apply plugin: 'com.android.application'
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'com.chad.baserecyclerviewadapterhelper'
+            artifactId = 'library'
+            version = '1.0.2'
+        }
+    }
+}
 
 android {
     compileSdkVersion 27
